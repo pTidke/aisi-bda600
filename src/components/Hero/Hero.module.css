@@ -1,0 +1,109 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, #f0f7ff 0%, #ffffff 100%);
+  padding: 120px 2rem 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid var(--primary);
+  padding: 4px 24px 0px 24px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  box-sizing: border-box;
+}
+
+.badge span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-primary);
+  line-height: normal;
+}
+
+.sparkle {
+  color: #fbbf24;
+}
+
+.title {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 840px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.scrollArrow {
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 1.5rem 60px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}

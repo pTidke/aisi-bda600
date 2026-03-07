@@ -1,0 +1,151 @@
+.section {
+  padding: 120px 0;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.eto {
+  color: var(--primary);
+  position: relative;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 64px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cardLink {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.card:hover .cardLink {
+  opacity: 1;
+  gap: 8px;
+}
+
+a.card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .card {
+    padding: 32px;
+  }
+}
