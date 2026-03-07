@@ -106,4 +106,8 @@
   .title {
     font-size: 3rem;
   }
+
+  .scrollHint {
+    display: none;
+  }
 }

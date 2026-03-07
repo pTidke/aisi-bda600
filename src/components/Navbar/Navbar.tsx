@@ -50,10 +50,19 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li className={styles.mobileOnly}>
+            <Link
+              href="/"
+              className={styles.ctaBtn}
+              onClick={() => setMenuOpen(false)}
+            >
+              <span>Explore AISI</span>
+            </Link>
+          </li>
         </ul>
 
         <div className={styles.actions}>
-          <Link href="/" className={styles.ctaBtn}>
+          <Link href="/" className={`${styles.ctaBtn} ${styles.desktopOnly}`}>
             <span>Explore AISI</span>
           </Link>
 
