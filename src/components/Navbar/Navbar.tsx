@@ -8,7 +8,7 @@ import styles from "./Navbar.module.css";
 const navLinks = [
   { label: "Literature Review", href: "/" },
   { label: "Data Processing", href: "/" },
-  { label: "Analysis", href: "/" },
+  { label: "Analysis", href: "/analysis" },
   { label: "SWOT Analysis", href: "/swot" },
   { label: "Our Team", href: "/team" },
 ];
