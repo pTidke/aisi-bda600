@@ -3,6 +3,8 @@ import SemiconductorStackedBar from "./SemiconductorStackedBar";
 import SemiconductorNestedTreemap from "./SemiconductorNestedTreemap";
 import AiInnovationRose from "./AiInnovationRose";
 import ResearchScatterChart from "./ResearchScatterChart";
+import AiTechPatentsBubble from "./AiTechPatentsBubble";
+import AiTechPatentsPackedBubble from "./AiTechPatentsPackedBubble";
 import styles from "./analysis.module.css";
 
 export const metadata = {
@@ -31,7 +33,7 @@ export default function AnalysisPage() {
           </h2>
           <p className={styles.chartSub}>
             Nested treemap showing each resource type broken down by market
-            segment and contributing country.
+            segment and contributing country. (Click on box for drill down)
           </p>
           <SemiconductorNestedTreemap />
           {/* <p className={styles.source}>Data: ETO (2019–2024)</p> */}
@@ -62,6 +64,22 @@ export default function AnalysisPage() {
           <AiInnovationRose />
         </div>
 
+        {/* <div className={styles.chartCard} style={{ padding: "40px 60px" }}>
+          <AiTechPatentsBubble />
+        </div> */}
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global AI Patents By{" "}
+            <span className="gradient-text">Sub-Domain</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Packed bubble chart visualization of patent volume across different
+            artificial intelligence technologies.
+          </p>
+          <AiTechPatentsPackedBubble />
+        </div>
+
         <div className={styles.chartCard}>
           <h2 className={styles.chartTitle}>
             Global Semiconductor Market Breakdown by Country and{" "}
@@ -81,7 +99,8 @@ export default function AnalysisPage() {
             <span className="gradient-text">Publications vs. Citations</span>
           </h2>
           <p className={styles.chartSub}>
-            Scatter plot of AI research impact · Highlighted points represent the Top 20 organizations by total impact.
+            Scatter plot of AI research impact · Highlighted points represent
+            the Top 20 organizations by total impact.
           </p>
           <ResearchScatterChart />
         </div>

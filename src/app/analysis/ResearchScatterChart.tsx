@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   ScatterChart,
   Scatter,
@@ -166,7 +165,7 @@ const ResearchScatterChart = () => {
     });
 
   return (
-    <div style={{ width: "100%", height: 650, marginTop: "20px" }}>
+    <div style={{ width: "100%", height: 540, marginTop: "20px" }}>
       {/* Country Legend (Top 20 only) */}
       <div
         style={{
@@ -175,7 +174,7 @@ const ResearchScatterChart = () => {
           gap: "20px",
           justifyContent: "left",
           marginBottom: "18px",
-          padding: "0 20px",
+          padding: "0 10px",
           fontFamily: FONT,
         }}
       >
@@ -191,7 +190,7 @@ const ResearchScatterChart = () => {
                   width: "10px",
                   height: "10px",
                   backgroundColor: color, // Square icon as requested
-                  borderRadius: "2px",
+                  borderRadius: "0px",
                 }}
               />
               <span
@@ -204,12 +203,12 @@ const ResearchScatterChart = () => {
         })}
       </div>
 
-      <ResponsiveContainer width="100%" height={520}>
+      <ResponsiveContainer width="100%" height={480}>
         <ScatterChart
           margin={{
             top: 20,
             right: 40,
-            bottom: 60,
+            bottom: 35,
             left: 20,
           }}
           style={{ outline: "none" }}
@@ -230,7 +229,7 @@ const ResearchScatterChart = () => {
             label={{
               value: "AI Publications",
               position: "bottom",
-              offset: 40,
+              offset: 25,
               fill: "#475569",
               fontSize: 14,
               fontFamily: FONT,
