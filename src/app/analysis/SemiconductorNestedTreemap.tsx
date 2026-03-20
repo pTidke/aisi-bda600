@@ -2,6 +2,8 @@
 
 import { Treemap } from "@ant-design/charts";
 
+const FONT = "'Josefin Sans', sans-serif";
+
 export default function SemiconductorNestedTreemap() {
   const treemapData = {
     name: "Global Semiconductor Supply Chain",
@@ -214,6 +216,7 @@ export default function SemiconductorNestedTreemap() {
       lineWidth: 1,
       labelLineWidth: 1.5,
       labelFontSize: 14,
+      labelFontFamily: FONT,
       labelPosition: "top-left",
       labelDx: 10,
       labelDy: 10,

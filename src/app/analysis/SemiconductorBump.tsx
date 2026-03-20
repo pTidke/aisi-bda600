@@ -3,6 +3,8 @@
 import React from "react";
 import { Line } from "@ant-design/plots";
 
+const FONT = "'Josefin Sans', sans-serif";
+
 const COUNTRY_COLORS: Record<string, string> = {
   "United States": "#5B9BD5",
   Japan: "#7EC8C8",
@@ -102,6 +104,7 @@ const SemiconductorBump = () => {
       dy: (d: any) => (d.year === "2024" ? 0 : -16),
       fontSize: 11,
       fontWeight: 600,
+      fontFamily: FONT,
       fill: (d: any) => COUNTRY_COLORS[d.country] || "#94A3B8",
     },
     axis: {
@@ -109,6 +112,7 @@ const SemiconductorBump = () => {
         title: null,
         labelFontSize: 13,
         labelFontWeight: 600,
+        labelFontFamily: FONT,
         labelFill: "#64748B",
         labelSpacing: 0, // Pushes year labels further down
         line: null,
@@ -118,6 +122,7 @@ const SemiconductorBump = () => {
       y: {
         title: null,
         labelFontSize: 11,
+        labelFontFamily: FONT,
         labelFill: "#94A3B8",
         grid: null,
         line: null,

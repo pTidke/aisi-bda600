@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 
+const FONT = "'Josefin Sans', sans-serif";
+
 const COLOR_MAP: Record<string, string> = {
   "Design Resource": "#5cb85c",
   "Material Resource": "#f0a832",
@@ -165,14 +167,14 @@ export default function SemiconductorStackedBar() {
                 title: false,
                 labelAutoRotate: true,
                 labelAutoHide: false,
-                labelFontFamily: "Josefin Sans, sans-serif",
+                labelFontFamily: FONT,
                 labelFontSize: 11,
               },
               y: {
                 title: "Market Size ($B)",
-                titleFontFamily: "Josefin Sans, sans-serif",
+                titleFontFamily: FONT,
                 labelFormatter: (v: number) => `$${v.toFixed(0)}B`,
-                labelFontFamily: "Josefin Sans, sans-serif",
+                labelFontFamily: FONT,
               },
             },
             legend: true,

@@ -1,6 +1,8 @@
-import SemiconductorTreemap from "./SemiconductorBump";
+import SemiconductorBump from "./SemiconductorBump";
 import SemiconductorStackedBar from "./SemiconductorStackedBar";
 import SemiconductorNestedTreemap from "./SemiconductorNestedTreemap";
+import AiInnovationRose from "./AiInnovationRose";
+import ResearchScatterChart from "./ResearchScatterChart";
 import styles from "./analysis.module.css";
 
 export const metadata = {
@@ -44,8 +46,20 @@ export default function AnalysisPage() {
             Rank by share of total semiconductor supply chain · Lower rank =
             larger share · 2019 → 2022 → 2024
           </p>
-          <SemiconductorTreemap />
+          <SemiconductorBump />
           {/* <p className={styles.source}>Data: ETO (2019–2024)</p> */}
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global AI Innovation & Workforce by{" "}
+            <span className="gradient-text">Country</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Stacked Rose Chart · Area is proportional to capacity across papers,
+            patents, and workers.
+          </p>
+          <AiInnovationRose />
         </div>
 
         <div className={styles.chartCard}>
@@ -59,6 +73,17 @@ export default function AnalysisPage() {
           </p>
           <SemiconductorStackedBar />
           {/* <p className={styles.source}>Data: ETO (2019–2024)</p> */}
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            AI Research Capacity:{" "}
+            <span className="gradient-text">Publications vs. Citations</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Scatter plot of AI research impact · Highlighted points represent the Top 20 organizations by total impact.
+          </p>
+          <ResearchScatterChart />
         </div>
       </section>
     </main>
