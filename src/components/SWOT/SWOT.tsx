@@ -1,19 +1,13 @@
 "use client";
-import {
-  TrendingUp,
-  AlertCircle,
-  Lightbulb,
-  ShieldAlert,
-  BarChart3,
-} from "lucide-react";
+import { TrendingUp, AlertCircle, Lightbulb, ShieldAlert } from "lucide-react";
 import styles from "./SWOT.module.css";
 
 const swotData = [
   {
     type: "Strengths",
     content:
-      "Rapid innovation cycles and robust computational infrastructure in leading tech hubs. Strong venture capital backing and concentration of global talent in key regions.",
-    bullets: ["R&D Investment", "Talent Concentration"],
+      "Cross-border AI research collaboration surged 342% (2015–2023), spanning 94 countries across 8 fields. 192 nations now produce AI publications, and the private sector shows depth with 691 tracked companies driving corporate AI R&D.",
+    bullets: ["Research Collaboration Growth", "Broad Country Participation"],
     icon: <TrendingUp size={24} />,
     color: "#22c55e",
     bgColor: "#f0fdf4",
@@ -21,8 +15,8 @@ const swotData = [
   {
     type: "Weaknesses",
     content:
-      "Fragmented ethical frameworks, data privacy vulnerabilities, and massive energy requirements. Lack of standardized governance across international borders.",
-    bullets: ["Energy Consumption", "Regulatory Fragmentation"],
+      "95% of semiconductor inputs are highly concentrated (HHI > 2500) with zero competitive markets. Patent data lags 5 years (complete only through 2020), workforce metrics cover just 17 countries, and AI governance is individually scoreable for only the US and China.",
+    bullets: ["Semiconductor Chokepoints", "Severe Data Gaps"],
     icon: <AlertCircle size={24} />,
     color: "#ef4444",
     bgColor: "#fef2f2",
@@ -30,8 +24,8 @@ const swotData = [
   {
     type: "Opportunities",
     content:
-      "Democratization of open-source models and cross-border research collaborations. Integration of AI in healthcare and climate change mitigation strategies.",
-    bullets: ["Open Source Growth", "Healthcare Optimization"],
+      "LLMs and AI Safety are the fastest-growing cross-border research fields, signaling frontier capability diffusion. 117 countries attract measurable AI investment, and expanding governance archives could enable more nations to build institutional AI readiness.",
+    bullets: ["Frontier Research Diffusion", "Governance Framework Expansion"],
     icon: <Lightbulb size={24} />,
     color: "#3b82f6",
     bgColor: "#eff6ff",
@@ -39,8 +33,8 @@ const swotData = [
   {
     type: "Threats",
     content:
-      "Algorithmic bias, automated misinformation campaigns, and the widening global digital divide. Potential job market displacement and security risks.",
-    bullets: ["Digital Divide", "AI Weaponization"],
+      "Critical supply chain chokepoints persist — EUV lithography is 100% Netherlands, discrete GPUs are 100% US. US–China chip design collaboration is declining while the digital divide widens: only 65 of 192 countries have data across all research pillars.",
+    bullets: ["Supply Chain Fragmentation", "Widening Digital Divide"],
     icon: <ShieldAlert size={24} />,
     color: "#f97316",
     bgColor: "#fff7ed",
@@ -53,7 +47,7 @@ export default function SWOT() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1 className={styles.title}>
-            SWOT: Global AI <span className="gradient-text">Adoption</span>
+            SWOT: Global AI <span className="gradient-text">Resilience</span>
           </h1>
         </div>
 

@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  // { label: "Literature Review", href: "/" },
-  { label: "Data Processing", href: "/" },
+  { label: "Home", href: "/" },
+  { label: "Data Processing", href: "/data-processing" },
   { label: "Analysis", href: "/analysis" },
   { label: "SWOT Analysis", href: "/swot" },
   { label: "Our Team", href: "/team" },
