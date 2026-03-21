@@ -1,38 +1,30 @@
 "use client";
+
 import dynamic from "next/dynamic";
 import styles from "./analysis.module.css";
 import ChartLoading from "./ChartLoading";
 
-// Dynamic imports for chart components to improve performance
-const SemiconductorNestedTreemap = dynamic(
-  () => import("./SemiconductorNestedTreemap"),
-  {
-    ssr: false,
-    loading: () => <ChartLoading />,
-  },
-);
+// Dynamic imports for chart components
+const SemiconductorNestedTreemap = dynamic(() => import("./SemiconductorNestedTreemap"), {
+  ssr: false,
+  loading: () => <ChartLoading />,
+});
 const SemiconductorBump = dynamic(() => import("./SemiconductorBump"), {
   ssr: false,
   loading: () => <ChartLoading />,
 });
-const SemiconductorStackedBar = dynamic(
-  () => import("./SemiconductorStackedBar"),
-  {
-    ssr: false,
-    loading: () => <ChartLoading />,
-  },
-);
+const SemiconductorStackedBar = dynamic(() => import("./SemiconductorStackedBar"), {
+  ssr: false,
+  loading: () => <ChartLoading />,
+});
 const AiInnovationRose = dynamic(() => import("./AiInnovationRose"), {
   ssr: false,
   loading: () => <ChartLoading />,
 });
-const AiTechPatentsPackedBubble = dynamic(
-  () => import("./AiTechPatentsPackedBubble"),
-  {
-    ssr: false,
-    loading: () => <ChartLoading />,
-  },
-);
+const AiTechPatentsPackedBubble = dynamic(() => import("./AiTechPatentsPackedBubble"), {
+  ssr: false,
+  loading: () => <ChartLoading />,
+});
 const ResearchScatterChart = dynamic(() => import("./ResearchScatterChart"), {
   ssr: false,
   loading: () => <ChartLoading />,
@@ -49,13 +41,10 @@ const USChinaCollabArea = dynamic(() => import("./USChinaCollabLine"), {
   ssr: false,
   loading: () => <ChartLoading />,
 });
-const PartnerDiversityScatter = dynamic(
-  () => import("./PartnerDiversityScatter"),
-  {
-    ssr: false,
-    loading: () => <ChartLoading />,
-  },
-);
+const PartnerDiversityScatter = dynamic(() => import("./PartnerDiversityScatter"), {
+  ssr: false,
+  loading: () => <ChartLoading />,
+});
 const PolicyStanceTimeline = dynamic(() => import("./PolicyStanceTimeline"), {
   ssr: false,
   loading: () => <ChartLoading />,
@@ -68,20 +57,12 @@ const InvestmentHeatmap = dynamic(() => import("./InvestmentHeatmap"), {
   ssr: false,
   loading: () => <ChartLoading />,
 });
-const AIPublicationsRacingBar = dynamic(
-  () => import("./AIPublicationsRacingBar"),
-  {
-    ssr: false,
-    loading: () => <ChartLoading />,
-  },
-);
+const AIPublicationsRacingBar = dynamic(() => import("./AIPublicationsRacingBar"), {
+  ssr: false,
+  loading: () => <ChartLoading />,
+});
 
-const metadata = {
-  title: "Analysis | AI Supremacy Index",
-  description: "Data visualizations and analysis for the AI Supremacy Index.",
-};
-
-export default function AnalysisPage() {
+export default function AnalysisContent() {
   return (
     <main className={styles.page}>
       <div className={styles.hero}>
