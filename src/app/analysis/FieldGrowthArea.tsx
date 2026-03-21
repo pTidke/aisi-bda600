@@ -149,8 +149,11 @@ const FieldGrowthArea = () => {
     },
     stack: true,
     smooth: true,
+    shapeField: "smooth",
     style: {
       fillOpacity: 0.6,
+      stroke: "#fff",
+      strokeWidth: 0.5,
     },
     axis: {
       x: {

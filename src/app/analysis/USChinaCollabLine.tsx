@@ -144,6 +144,7 @@ const USChinaCollabLine = () => {
       return FIELD_COLORS[name] || "#94A3B8";
     },
     smooth: true,
+    shapeField: "smooth",
     style: {
       lineWidth: 2.5,
     },

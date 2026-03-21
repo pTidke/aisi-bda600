@@ -10,6 +10,10 @@ import CollaborationChord from "./CollaborationChord";
 import FieldGrowthArea from "./FieldGrowthArea";
 import USChinaCollabArea from "./USChinaCollabLine";
 import PartnerDiversityScatter from "./PartnerDiversityScatter";
+import PolicyStanceTimeline from "./PolicyStanceTimeline";
+import AIPatentSunburst from "./AIPatentSunburst";
+import InvestmentHeatmap from "./InvestmentHeatmap";
+import AIPublicationsRacingBar from "./AIPublicationsRacingBar";
 
 export const metadata = {
   title: "Analysis | AI Supremacy Index",
@@ -155,6 +159,52 @@ export default function AnalysisPage() {
             the Top 20 organizations by total impact.
           </p>
           <PartnerDiversityScatter />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            US AI Policy Stance Over Time{" "}
+            <span className="gradient-text">(2019–2025)</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Stacked bar: Enabling vs Restrictive vs Balanced vs Neutral
+          </p>
+          <PolicyStanceTimeline />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global AI Patent Landscape{" "}
+            <span className="gradient-text">Sector Categories</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Sunburst chart showing AI patent distribution across technology
+            categories.
+          </p>
+          <AIPatentSunburst />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global AI Investment Heatmap{" "}
+            <span className="gradient-text">Top 15 Countries, Fields</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Heatmap showing AI investment across countries and technology
+            categories.
+          </p>
+          <InvestmentHeatmap />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global AI Publications Racing Bar (2015–2023){" "}
+            <span className="gradient-text">Top 15 Countries</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Animated bar chart that auto-plays through years
+          </p>
+          <AIPublicationsRacingBar />
         </div>
       </section>
     </main>
