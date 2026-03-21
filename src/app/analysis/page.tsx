@@ -3,9 +3,13 @@ import SemiconductorStackedBar from "./SemiconductorStackedBar";
 import SemiconductorNestedTreemap from "./SemiconductorNestedTreemap";
 import AiInnovationRose from "./AiInnovationRose";
 import ResearchScatterChart from "./ResearchScatterChart";
-import AiTechPatentsBubble from "./AiTechPatentsBubble";
+// import AiTechPatentsBubble from "./AiTechPatentsBubble";
 import AiTechPatentsPackedBubble from "./AiTechPatentsPackedBubble";
 import styles from "./analysis.module.css";
+import CollaborationChord from "./CollaborationChord";
+import FieldGrowthArea from "./FieldGrowthArea";
+import USChinaCollabArea from "./USChinaCollabLine";
+import PartnerDiversityScatter from "./PartnerDiversityScatter";
 
 export const metadata = {
   title: "Analysis | AI Supremacy Index",
@@ -54,6 +58,19 @@ export default function AnalysisPage() {
 
         <div className={styles.chartCard}>
           <h2 className={styles.chartTitle}>
+            Global Semiconductor Market Breakdown by Country and{" "}
+            <span className="gradient-text">Resource Type</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Stacked bars show each country&apos;s contribution across resource
+            types, sorted by total market size.
+          </p>
+          <SemiconductorStackedBar />
+          {/* <p className={styles.source}>Data: ETO (2019–2024)</p> */}
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
             Global AI Innovation & Workforce by{" "}
             <span className="gradient-text">Country</span>
           </h2>
@@ -82,19 +99,6 @@ export default function AnalysisPage() {
 
         <div className={styles.chartCard}>
           <h2 className={styles.chartTitle}>
-            Global Semiconductor Market Breakdown by Country and{" "}
-            <span className="gradient-text">Resource Type</span>
-          </h2>
-          <p className={styles.chartSub}>
-            Stacked bars show each country&apos;s contribution across resource
-            types, sorted by total market size.
-          </p>
-          <SemiconductorStackedBar />
-          {/* <p className={styles.source}>Data: ETO (2019–2024)</p> */}
-        </div>
-
-        <div className={styles.chartCard}>
-          <h2 className={styles.chartTitle}>
             AI Research Capacity:{" "}
             <span className="gradient-text">Publications vs. Citations</span>
           </h2>
@@ -103,6 +107,54 @@ export default function AnalysisPage() {
             the Top 20 organizations by total impact.
           </p>
           <ResearchScatterChart />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global Research{" "}
+            <span className="gradient-text">Collaboration Network</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Chord diagram visualizing co-authorship links between top countries.
+            The thickness of the arcs represents the volume of shared research
+            articles.
+          </p>
+          <CollaborationChord />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Global Cross-Border AI Research{" "}
+            <span className="gradient-text">Collaboration</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Area chart showing the volume of cross-border AI research
+            collaborations between countries over time.
+          </p>
+          <FieldGrowthArea />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            AI Research Collaboration by Field{" "}
+            <span className="gradient-text">US-China</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Stacked area showing collaboration trends across 8 fields
+          </p>
+          <USChinaCollabArea />
+        </div>
+
+        <div className={styles.chartCard}>
+          <h2 className={styles.chartTitle}>
+            Partner Diversity — Who are the global{" "}
+            <span className="gradient-text">AI research hubs?</span>
+          </h2>
+          <p className={styles.chartSub}>
+            Scatter plot of AI research impact · Highlighted points represent
+            the Top 20 organizations by total impact.
+          </p>
+          <PartnerDiversityScatter />
         </div>
       </section>
     </main>
