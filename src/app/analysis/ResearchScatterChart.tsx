@@ -206,7 +206,7 @@ const ResearchScatterChart = () => {
       <ResponsiveContainer width="100%" height={480}>
         <ScatterChart
           margin={{
-            top: 20,
+            top: 30,
             right: 40,
             bottom: 35,
             left: 20,
