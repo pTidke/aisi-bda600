@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Bar } from "@ant-design/plots";
+import { COUNTRY_COLORS, FONT } from "./constants";
 
 /*
  *  AI Publications Racing Bar — Top 15 Countries (2015–2023)
@@ -10,24 +11,6 @@ import { Bar } from "@ant-design/plots";
  *
  *  npm install @ant-design/plots
  */
-
-const COUNTRY_COLORS: Record<string, string> = {
-  China: "#ED7D7D",
-  "United States": "#5B9BD5",
-  India: "#F5A623",
-  "United Kingdom": "#9B59B6",
-  Germany: "#4CD964",
-  Japan: "#7EC8C8",
-  France: "#3498DB",
-  Italy: "#1ABC9C",
-  Canada: "#E74C3C",
-  "South Korea": "#C4A484",
-  Australia: "#F39C12",
-  Spain: "#E67E22",
-  "South and Central America": "#2ECC71",
-  Russia: "#95A5A6",
-  Indonesia: "#54A0FF",
-};
 
 const ALL_DATA: Record<number, { country: string; value: number }[]> = {
   2015: [
@@ -299,7 +282,7 @@ const AIPublicationsRacingBar = () => {
     legend: false as const,
     animation: {
       update: {
-        duration: 800,
+        duration: 1000,
         easing: "ease-in-out",
       },
     },
@@ -312,11 +295,11 @@ const AIPublicationsRacingBar = () => {
         style={{
           position: "absolute",
           top: 16,
-          right: 24,
+          right: 64,
           fontSize: 72,
           fontWeight: 800,
           color: "rgba(0,0,0,0.06)",
-          fontFamily: "'Josefin Sans', sans-serif",
+          fontFamily: FONT,
           lineHeight: 1,
           zIndex: 1,
           pointerEvents: "none",
@@ -327,7 +310,7 @@ const AIPublicationsRacingBar = () => {
       </div>
 
       {/* Chart */}
-      <div style={{ width: "100%", height: 520 }}>
+      <div style={{ width: "100%", height: 550 }}>
         <Bar {...config} />
       </div>
 
@@ -356,7 +339,7 @@ const AIPublicationsRacingBar = () => {
             justifyContent: "center",
             fontSize: 16,
             color: "#555",
-            transition: "all 0.2s",
+            transition: "all 0.5s",
           }}
         >
           {isPlaying ? "⏸" : "▶"}
@@ -412,7 +395,7 @@ const AIPublicationsRacingBar = () => {
             textTransform: "uppercase",
           }}
         >
-          1.5s / year
+          2s / year
         </span>
       </div>
     </div>

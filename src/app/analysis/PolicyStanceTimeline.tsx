@@ -2,13 +2,9 @@
 
 import React from "react";
 import { Column } from "@ant-design/plots";
+import { STANCE_COLORS } from "./constants";
 
-const STANCE_COLORS: Record<string, string> = {
-  Enabling: "#4CD964",
-  Restrictive: "#ED7D7D",
-  Balanced: "#F5A623",
-  Neutral: "#94A3B8",
-};
+// STANCE_COLORS is now imported from constants.ts
 
 const STANCE_ORDER = ["Enabling", "Balanced", "Neutral", "Restrictive"];
 

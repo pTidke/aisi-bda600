@@ -11,25 +11,12 @@ import {
   Cell,
   ZAxis,
 } from "recharts";
+import { COUNTRY_COLORS, FONT } from "./constants";
 import data from "./parat_scatter_data.json";
 
-const FONT = "'Josefin Sans', sans-serif";
+// FONT is now imported from constants.ts
 
-const COUNTRY_COLORS: Record<string, string> = {
-  "United States": "#5B9BD5",
-  Japan: "#7EC8C8",
-  China: "#ED7D7D",
-  "South Korea": "#C4A484",
-  Netherlands: "#F5A623",
-  Germany: "#D5A6BD",
-  "United Kingdom": "#9B59B6",
-  Finland: "#4CD964",
-  Switzerland: "#E8637A",
-  Ireland: "#4C8BF5",
-  Taiwan: "#70AD47",
-  Singapore: "#54A0FF",
-  Austria: "#FF9F43",
-};
+// COUNTRY_COLORS is now imported from constants.ts
 
 interface ChartDataItem {
   Name: string;

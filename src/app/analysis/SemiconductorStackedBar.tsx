@@ -1,15 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { FONT, RESOURCE_COLORS as COLOR_MAP } from "./constants";
 
-const FONT = "'Josefin Sans', sans-serif";
-
-const COLOR_MAP: Record<string, string> = {
-  "Design Resource": "#5cb85c",
-  "Material Resource": "#f0a832",
-  Process: "#e8756a",
-  "Tool Resource": "#5b9bd5",
-};
+// FONT and COLOR_MAP are now imported from constants.ts
 
 const TYPE_KEYS = Object.keys(COLOR_MAP) as Array<keyof typeof COLOR_MAP>;
 

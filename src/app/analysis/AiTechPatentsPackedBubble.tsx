@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const FONT = "'Josefin Sans', sans-serif";
+import { FONT } from "./constants";
 
 const DATA = {
   name: "root",

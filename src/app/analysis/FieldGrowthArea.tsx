@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Area } from "@ant-design/plots";
+import { FIELD_COLORS } from "./constants";
 
 /*
  *  Global Cross-Border AI Collaboration by Research Field (2015–2023)
@@ -11,16 +12,7 @@ import { Area } from "@ant-design/plots";
  *  npm install @ant-design/plots
  */
 
-const FIELD_COLORS: Record<string, string> = {
-  "Artificial intelligence": "#5B9BD5",
-  "Computer vision": "#7EC8C8",
-  "Chip design and fabrication": "#ED7D7D",
-  Cybersecurity: "#F5A623",
-  Robotics: "#C4A484",
-  "Natural language processing": "#9B59B6",
-  "Large language models": "#4CD964",
-  "AI safety": "#54A0FF",
-};
+// FIELD_COLORS is now imported from constants.ts
 
 const fieldData = [
   { year: "2015", field: "Artificial intelligence", value: 22277 },

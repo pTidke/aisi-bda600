@@ -3,7 +3,7 @@
 import React from "react";
 import { Heatmap } from "@ant-design/plots";
 
-const FONT = "'Josefin Sans', sans-serif";
+import { FONT } from "./constants";
 
 const SECTOR_SHORT: Record<string, string> = {
   "Mobile, platforms & Internet services": "Mobile & Internet",

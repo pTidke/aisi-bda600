@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 // import { Mix } from "@ant-design/charts"; 
 
-const FONT = "'Josefin Sans', sans-serif";
+import { FONT } from "./constants";
 
 const DATA = [
   { tech: "Computer Vision", value: 27304.0, color: "#4888B4" },

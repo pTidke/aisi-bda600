@@ -11,7 +11,7 @@ import FieldGrowthArea from "./FieldGrowthArea";
 import USChinaCollabArea from "./USChinaCollabLine";
 import PartnerDiversityScatter from "./PartnerDiversityScatter";
 import PolicyStanceTimeline from "./PolicyStanceTimeline";
-import AIPatentSunburst from "./AIPatentSunburst";
+import AIPatentSunbursts from "./AIPatentSunbursts";
 import InvestmentHeatmap from "./InvestmentHeatmap";
 import AIPublicationsRacingBar from "./AIPublicationsRacingBar";
 
@@ -179,9 +179,9 @@ export default function AnalysisPage() {
           </h2>
           <p className={styles.chartSub}>
             Sunburst chart showing AI patent distribution across technology
-            categories.
+            categories (Click on slice for drill down)
           </p>
-          <AIPatentSunburst />
+          <AIPatentSunbursts />
         </div>
 
         <div className={styles.chartCard}>

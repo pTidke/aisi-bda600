@@ -2,21 +2,11 @@
 
 import React from "react";
 import { Line } from "@ant-design/plots";
+import { COUNTRY_COLORS, FONT } from "./constants";
 
-const FONT = "'Josefin Sans', sans-serif";
+// FONT is now imported from constants.ts
 
-const COUNTRY_COLORS: Record<string, string> = {
-  "United States": "#5B9BD5",
-  Japan: "#7EC8C8",
-  Netherlands: "#F5A623",
-  Singapore: "#54A0FF",
-  China: "#ED7D7D",
-  "South Korea": "#C4A484",
-  Germany: "#D5A6BD",
-  Austria: "#FF9F43",
-  Taiwan: "#70AD47",
-  "United Kingdom": "#9B59B6",
-};
+// COUNTRY_COLORS is now imported from constants.ts
 
 const SHARE_DATA: Record<string, number[]> = {
   "United States": [47.0, 29.55, 36.45],

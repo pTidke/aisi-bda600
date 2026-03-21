@@ -12,27 +12,12 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
+import { COUNTRY_COLORS, FONT } from "./constants";
 import data from "./partner_diversity_data.json";
 
-const FONT = "'Josefin Sans', sans-serif";
+// FONT is now imported from constants.ts
 
-const COUNTRY_COLORS: Record<string, string> = {
-  "United States": "#5B9BD5",
-  China: "#ED7D7D",
-  "United Kingdom": "#9B59B6",
-  Germany: "#D5A6BD",
-  France: "#3498DB",
-  Canada: "#E74C3C",
-  Australia: "#F39C12",
-  Italy: "#1ABC9C",
-  India: "#F5A623",
-  Japan: "#7EC8C8",
-  Spain: "#E67E22",
-  Netherlands: "#F5A623",
-  Switzerland: "#95A5A6",
-  Singapore: "#54A0FF",
-  "Saudi Arabia": "#2ECC71",
-};
+// COUNTRY_COLORS is now imported from constants.ts
 
 interface ChartDataItem {
   country: string;

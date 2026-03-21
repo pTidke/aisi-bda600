@@ -3,31 +3,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// Standard font for all AISI charts
-const FONT = "Josefin Sans, sans-serif";
+import { FONT, REGION_COLORS, FIELD_COLORS } from "./constants";
 
-const REGION_COLORS: Record<string, string> = {
-  "Asia-Pacific": "#ED7D7D",
-  Americas: "#5B9BD5",
-  Europe: "#4CD964",
-  Oceania: "#F39C12",
-  Other: "#A9AFBB",
-};
-
-const FIELD_COLORS: Record<string, string> = {
-  "Personal Devices": "#5B9BD5",
-  "Life Sciences": "#4CD964",
-  Telecom: "#FF9F43",
-  Business: "#FF6B6B",
-  Transportation: "#475569",
-  "Phys. Sciences": "#9B59B6",
-  Security: "#F1C40F",
-  Manufacturing: "#7EC8C8",
-  Finance: "#C4A484",
-  Agriculture: "#2ECC71",
-  Energy: "#F39C12",
-  Other: "#A9AFBB",
-};
+// REGION_COLORS and FIELD_COLORS are now imported from constants.ts
 
 const sunburstData = {
   name: "Global AI Patents",
@@ -310,7 +288,7 @@ const AIPatentSunburst = () => {
           rootText: "Global AI Patents",
           style: {
             fontSize: 12,
-            fontFamily: "Inter, sans-serif",
+            fontFamily: FONT,
             fontWeight: 400,
             dy: 14,
           },

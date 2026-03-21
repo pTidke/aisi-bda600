@@ -3,7 +3,7 @@
 import React from "react";
 import { Pie } from "@ant-design/charts";
 
-const FONT = "'Josefin Sans', sans-serif";
+import { FONT, COUNTRY_COLORS } from "./constants";
 
 const RAW_DATA = [
   {
@@ -85,19 +85,7 @@ const RAW_DATA = [
   },
 ];
 
-const COUNTRY_COLORS: Record<string, string> = {
-  "United States": "#5B9BD5",
-  Japan: "#7EC8C8",
-  China: "#ED7D7D",
-  "South Korea": "#C4A484",
-  Netherlands: "#F5A623",
-  Germany: "#D5A6BD",
-  "United Kingdom": "#9B59B6",
-  Finland: "#4CD964",
-  Switzerland: "#E8637A",
-  Ireland: "#4C8BF5",
-  Others: "#CBD5E1",
-};
+// COUNTRY_COLORS is now imported from constants.ts
 
 // Calculate Total index for basic rose chart
 const data = RAW_DATA.map((row) => ({

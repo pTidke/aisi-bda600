@@ -1,8 +1,9 @@
 "use client";
 
 import { Treemap } from "@ant-design/charts";
+import { FONT } from "./constants";
 
-const FONT = "'Josefin Sans', sans-serif";
+// FONT is now imported from constants.ts
 
 export default function SemiconductorNestedTreemap() {
   const treemapData = {
