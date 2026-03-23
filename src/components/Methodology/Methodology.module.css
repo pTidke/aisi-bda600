@@ -51,8 +51,12 @@
 
 .dimensionsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.dimensionCard:last-child:nth-child(3n + 1) {
+  grid-column: 2 / 3;
 }
 
 .dimensionCard {
