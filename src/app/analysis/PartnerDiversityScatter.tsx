@@ -254,14 +254,17 @@ const PartnerDiversityScatter = () => {
 
           {/* Others */}
           <Scatter name="Others" data={othersData} shape="circle">
-            {othersData.map((entry, index) => (
-              <Cell
-                key={`cell-others-${index}`}
-                fill="#CBD5E1"
-                fillOpacity={0.35}
-                stroke="none"
-              />
-            ))}
+            {othersData.map((entry, index) => {
+              const countryColor = COUNTRY_COLORS[entry.country] || "#94A3B8";
+              return (
+                <Cell
+                  key={`cell-others-${index}`}
+                  fill={countryColor}
+                  fillOpacity={0.25}
+                  stroke="none"
+                />
+              );
+            })}
           </Scatter>
 
           {/* Top 15 */}
