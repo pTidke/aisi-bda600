@@ -187,6 +187,10 @@
   color: var(--text-muted);
 }
 
+.understandingSection {
+  margin-bottom: 80px;
+}
+
 /* Normalization Box */
 .normalizationBox {
   background: var(--bg-dark);

@@ -8,6 +8,7 @@ import {
   FileText,
   Shield,
 } from "lucide-react";
+import UnderstandingScores from "./UnderstandingScores";
 import styles from "./Methodology.module.css";
 
 const dimensions = [
@@ -175,6 +176,10 @@ export default function Methodology() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className={styles.understandingSection}>
+          <UnderstandingScores />
         </div>
 
         <div className={styles.normalizationBox}>

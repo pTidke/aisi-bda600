@@ -36,3 +36,9 @@
   flex-direction: column;
   gap: 48px;
 }
+
+.understandingWrapper {
+  width: 100%;
+  margin-top: 0px;
+  padding-bottom: 2rem;
+}
