@@ -9,11 +9,7 @@ const teamMembers = [
     email: "cazubuike9158@sdsu.edu",
     linkedin: "https://www.linkedin.com/in/chuks-azubuike/",
     bio: "Data science graduate student with a strong interest in statistical analysis, machine learning, and exploratory data analysis. Passionate about uncovering insights from complex datasets and turning them into actionable solutions. Skilled in R, Python, SQL, and Tableau, Chuks enjoys applying analytics to real-world problems and creating clear visualizations for decision-makers.",
-    responsibilities: [
-      "Statistical Analysis",
-      "ML",
-      "Exploratory Data Analysis",
-    ],
+    responsibilities: ["Statistical Analysis", "EDA"],
     image: "/Chuks.jpg",
   },
   {
@@ -21,11 +17,7 @@ const teamMembers = [
     email: "hnguyen9196@sdsu.edu",
     linkedin: "https://www.linkedin.com/in/huong-nguyen/",
     bio: "Researches national AI capacity by reviewing historical institutional approaches. Her work focus on the semiconductor industry, specifically analyzing chip design and manufacturing in leading countries, while managing the project’s SWOT analysis to identify key strengths and potential risks.",
-    responsibilities: [
-      "AI Capacity Research",
-      "Semiconductors",
-      "SWOT Management",
-    ],
+    responsibilities: ["EDA", "Data Visualization"],
     image: "/Houng.jpeg",
   },
   {
@@ -33,11 +25,7 @@ const teamMembers = [
     email: "ptidke4710@sdsu.edu",
     linkedin: "https://www.linkedin.com/in/prajwal-tidke/",
     bio: "Senior Data Engineer pursuing MS in Big Data Analytics at SDSU. Specializes in building production-grade ETL pipelines, cloud infrastructure (AWS, Databricks, Snowflake), and AI-powered applications, with a focus on solving complex data problems that have real-world impact. I love Photography as my side hustle.",
-    responsibilities: [
-      "ETL Pipelines",
-      "Cloud Infrastructure",
-      "System Architecture",
-    ],
+    responsibilities: ["Website Design", "Data Visualization"],
     image: "/Prajwal.jpeg",
   },
 ];
