@@ -91,7 +91,7 @@ const dimensions = [
     title: "5. Talent Base",
     weight: "10%",
     icon: <Users size={20} />,
-    desc: "Tiered fallback scoring: Tier 1 uses AI workforce headcount (≥3 companies with data). Tier 2 falls back to AI publications. Tier 3 uses company count only.",
+    desc: "Tiered fallback scoring: Tier 1 uses AI workforce presence (≥3 companies with data). Tier 2 falls back to AI publications. Tier 3 uses company count only.",
   },
   {
     title: "6. Collaboration Network",

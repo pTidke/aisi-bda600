@@ -26,7 +26,7 @@ const etoDatasets = [
   },
   {
     title: "Private-Sector AI Indicators",
-    desc: "Granular data on corporate AI activity, including workforce headcounts, publication volume, and specific company profiles.",
+    desc: "Granular data on corporate AI activity, including AI workforce presence, publication volume, and specific company profiles.",
     icon: <Database size={24} />,
     color: "#8b5cf6",
     link: "https://eto.tech/dataset-docs/private-sector-ai-indicators/",

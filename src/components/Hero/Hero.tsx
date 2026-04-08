@@ -40,9 +40,9 @@ export default function Hero() {
         >
           The global race for artificial intelligence is no longer just about
           software - it is a complex geopolitical struggle for technological
-          sovereignty. Throigh our capstone project, we aim provide a
+          sovereignty. Through our capstone project, we aim to provide a
           data-driven framework to monitor, compare, and understand the core
-          drivers of AI development; by synthesizing disparate indicators into a
+          drivers of AI development by synthesizing disparate indicators into a
           single index.
         </motion.p>
 
