@@ -14,7 +14,7 @@ import styles from "./Methodology.module.css";
 const dimensions = [
   {
     title: "1. Hardware Sovereignty",
-    weight: "22%",
+    weight: "25%",
     icon: <Cpu size={20} />,
     isHighest: true,
     components: [
@@ -74,7 +74,7 @@ const dimensions = [
   },
   {
     title: "4. Innovation Output",
-    weight: "18%",
+    weight: "15%",
     icon: <TrendingUp size={20} />,
     components: [
       {

@@ -479,10 +479,10 @@ const ScoringSection = () => (
       <thead><tr><Th>Dimension</Th><Th align="right">Weight</Th><Th align="right">Coverage</Th><Th>Sub-components</Th><Th>Data Source</Th></tr></thead>
       <tbody>
         {[
-          ["Hardware Sovereignty", "22%", "~23", "Avg share (35%) + Peak share (30%) + Breadth/96 (35%)", "Semiconductor"],
+          ["Hardware Sovereignty", "25%", "~23", "Avg share (35%) + Peak share (30%) + Breadth/96 (35%)", "Semiconductor"],
           ["Research Capacity", "20%", "~192", "Log pub volume (35%) + Lagged citations (45%) + Z-scored growth (20%)", "Country AI"],
           ["Commercial Ecosystem", "20%", "~117", "Log investment (50%) + Log company count (30%) + Pub intensity (20%)", "Country AI + PARAT"],
-          ["Innovation Output", "18%", "~73", "Log patent volume (45%) + Field diversity /11 (55%)", "Country AI"],
+          ["Innovation Output", "15%", "~73", "Log patent volume (45%) + Field diversity /11 (55%)", "Country AI"],
           ["Talent Base", "10%", "17", "Tiered fallback: Workforce → Publications → Company count", "PARAT"],
           ["Collaboration Network", "5%", "~94", "Partner div capped@54 (40%) + Strategic volume (35%) + Partner quality (25%)", "Cross-Border"],
           ["Governance Readiness", "5%", "2", "Log enacted docs (30%) + Breadth/77 (40%) + Maturity ratio (30%)", "AGORA"],
@@ -503,12 +503,20 @@ const ScoringSection = () => (
     </TableWrap>
 
     <h4 style={{ fontFamily: FONT, fontSize: 14, fontWeight: 700, color: COLORS.text, margin: "24px 0 12px" }}>Coverage-Weighted Composite Formula</h4>
-    <CodeBlock>{`AISI Score = Σ (dimension_score × dimension_weight × dimension_coverage)
-             ─────────────────────────────────────────────────────────
-                        Σ (dimension_weight × dimension_coverage)
+    <CodeBlock>{`1. Composite Base = Σ (dimension_score × dimension_weight × dimension_coverage)
+                    ─────────────────────────────────────────────────────────
+                               Σ (dimension_weight × dimension_coverage)
 
-+ Breadth factor: 0.75 + 0.25 × (dims_scored / 7)
-  → Penalizes countries scoring on fewer dimensions`}</CodeBlock>
+2. Final AISI Score = Composite Base × Breadth Multiplier
+
+Where Breadth Multiplier = 0.75 + 0.25 × (dims_scored / 7)`}</CodeBlock>
+
+    <div style={{ marginTop: 12, padding: "12px 16px", background: COLORS.cardAlt, borderRadius: 8, fontSize: 12.5, color: COLORS.textMid, border: `1px solid ${COLORS.borderLight}`, lineHeight: 1.6 }}>
+      <strong>Intuition:</strong> A country's score is first calculated as the weighted average of its available dimension data. 
+      This <em>Composite Base</em> is then adjusted by a <strong>Breadth Multiplier</strong> (ranging from 0.75 to 1.0) 
+      based on how many of the 7 dimensions have data. A country with data in only 1/7 dimensions is penalized 
+      significantly (~22% reduction), whereas a country with full 7/7 coverage keeps 100% of its base score.
+    </div>
 
     <h4 style={{ fontFamily: FONT, fontSize: 14, fontWeight: 700, color: COLORS.text, margin: "24px 0 12px" }}>Bug Fixes Applied</h4>
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 10 }}>
@@ -516,7 +524,7 @@ const ScoringSection = () => (
         <strong>Bug #1 — NaN ≠ Zero:</strong> Countries absent from semiconductor/collaboration/governance datasets were treated as NaN (missing), not zero (genuine absence). The coverage-weighted formula rewarded them with higher scores for having fewer dimensions. <strong>Fix:</strong> Fill genuine-zero dimensions with 0 before scoring.
       </FlowBox>
       <FlowBox small accent={COLORS.red}>
-        <strong>Bug #2 — Breadth Gaming:</strong> Countries scoring on only 2–3 dimensions could outscore broader profiles because the coverage denominator was smaller. <strong>Fix:</strong> Added breadth factor <code>0.75 + 0.25 × (dims/7)</code> that penalizes shallow coverage.
+        <strong>Bug #2 — Breadth Gaming:</strong> Countries scoring on only 2–3 dimensions could outscore broader profiles because the coverage denominator was smaller. <strong>Fix:</strong> Added a <strong>Breadth Multiplier</strong> <code>0.75 + 0.25 × (dims/7)</code> that scales the raw score based on data depth.
       </FlowBox>
     </div>
 
