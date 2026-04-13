@@ -16,14 +16,14 @@ export default function VideoSection() {
 
         <div className={styles.videoWrapper}>
           <div className={styles.videoContainer}>
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="AISI Analysis Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className={styles.iframe}
-            ></iframe>
+            <div className={styles.skeletonWrapper}>
+              <div className={styles.shimmer}></div>
+              <div className={styles.skeletonHeader}></div>
+              <div className={styles.skeletonMain}>
+                <div className={styles.skeletonPlayCircle}></div>
+              </div>
+              <div className={styles.skeletonBar}></div>
+            </div>
           </div>
           <div className={styles.decorTL}></div>
           <div className={styles.decorBR}></div>

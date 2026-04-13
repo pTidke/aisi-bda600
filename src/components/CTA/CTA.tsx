@@ -17,7 +17,7 @@ export default function CTA() {
             points processed through our proprietary neural pipeline.
           </p>
           <div className={styles.actions}>
-            <a href="/aisi-index" className="btn-primary">
+            <a href="/aisi-index" className="btn-primary btn-glow">
               Explore AISI <ArrowRight size={18} />
             </a>
             {/* <a href="#dataset" className="btn-outline">

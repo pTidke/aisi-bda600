@@ -121,7 +121,7 @@
   padding: 12px 24px;
   background: var(--text-primary);
   color: #fff;
-  border-radius: var(--radius-full);
+  border-radius: 0px;
   font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -141,9 +141,9 @@
 }
 
 .ctaBtn:hover {
-  background: #000;
+  background: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px -5px rgba(212, 23, 54, 0.4);
 }
 
 .desktopOnly {

@@ -53,7 +53,7 @@ export default function Navbar() {
           <li className={styles.mobileOnly}>
             <Link
               href="/aisi-index"
-              className={styles.ctaBtn}
+              className={`${styles.ctaBtn} btn-glow`}
               onClick={() => setMenuOpen(false)}
             >
               <span>Explore AISI</span>
@@ -62,7 +62,7 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.actions}>
-          <Link href="/aisi-index" className={`${styles.ctaBtn} ${styles.desktopOnly}`}>
+          <Link href="/aisi-index" className={`${styles.ctaBtn} ${styles.desktopOnly} btn-glow`}>
             <span>Explore AISI</span>
           </Link>
 
