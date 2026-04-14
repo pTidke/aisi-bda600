@@ -3,9 +3,9 @@ import { Youtube, Github } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const navLinks = [
-  { label: "Literature Review", href: "/#methodology" },
-  { label: "Data Processing", href: "/#datasets" },
-  { label: "Analysis", href: "/#analysis" },
+  { label: "Home", href: "/" },
+  { label: "Data Processing", href: "/data-processing" },
+  { label: "Analysis", href: "/analysis" },
   { label: "SWOT Analysis", href: "/swot" },
   { label: "Our Team", href: "/team" },
 ];

@@ -13,12 +13,12 @@ export default function CTA() {
             <span className="gradient-text">full AISI architecture?</span>
           </h2>
           <p className={styles.subtitle}>
-            Analyze over 50 nations and thousands of multi-dimensional data
-            points processed through our proprietary neural pipeline.
+            Analyze Top 15 nations and thousands of multi-dimensional data
+            points processed through our proprietary AISI Dashboard.
           </p>
           <div className={styles.actions}>
             <a href="/aisi-index" className="btn-primary btn-glow">
-              Explore AISI <ArrowRight size={18} />
+              Explore AISI Dashboard <ArrowRight size={18} />
             </a>
             {/* <a href="#dataset" className="btn-outline">
               Access Raw Data <Download size={18} />

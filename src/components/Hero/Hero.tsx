@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className={styles.actions}
         >
-          <a href="#analysis" className="btn-primary">
+          <a href="/analysis" className="btn-primary">
             Explore Analysis <ArrowRight size={18} />
           </a>
           <a href="#paper" className="btn-outline">
