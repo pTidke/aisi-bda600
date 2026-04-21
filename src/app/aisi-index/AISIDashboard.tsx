@@ -6,1064 +6,872 @@ const FONT = "'Josefin Sans', sans-serif";
 
 const COUNTRIES = [
   {
-    "name": "United States",
-    "code": "US",
-    "score": 77.6,
-    "rank": 1,
-    "cov": 1,
-    "dims": 7,
-    "lat": 38.9,
-    "lng": -97,
-    "sub": "Full-spectrum leader",
-    "ch": "+1.2",
-    "d": [
-      46.9,
-      96.4,
-      81.2,
-      73.3,
-      100,
-      100,
-      82.7
-    ],
-    "str": [
+    name: "United States",
+    code: "US",
+    score: 79.4,
+    rank: 1,
+    cov: 1,
+    dims: 7,
+    lat: 38.9,
+    lng: -97,
+    sub: "Full-spectrum leader",
+    ch: "+1.2",
+    d: [56.2, 96.2, 81.2, 73.3, 100, 100, 82.7],
+    str: [
       "Broadest collaboration network",
       "Dominant hardware position",
-      "Only country with Tier-1 workforce data"
+      "Only country with Tier-1 workforce data",
     ],
-    "wk": [
+    wk: [
       "Governance framework still evolving",
-      "HQ-attribution inflates some metrics"
+      "HQ-attribution inflates some metrics",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "China",
-        "v": 197000
+        c: "China",
+        v: 197000,
       },
       {
-        "c": "United Kingdom",
-        "v": 52000
+        c: "United Kingdom",
+        v: 52000,
       },
       {
-        "c": "Germany",
-        "v": 38000
+        c: "Germany",
+        v: 38000,
       },
       {
-        "c": "Canada",
-        "v": 35000
+        c: "Canada",
+        v: 35000,
       },
       {
-        "c": "India",
-        "v": 31000
-      }
-    ]
+        c: "India",
+        v: 31000,
+      },
+    ],
   },
   {
-    "name": "China",
-    "code": "CN",
-    "score": 63.9,
-    "rank": 2,
-    "cov": 1,
-    "dims": 7,
-    "lat": 35.9,
-    "lng": 104.2,
-    "sub": "Research powerhouse",
-    "ch": "+2.4",
-    "d": [
-      48.5,
-      100,
-      66.6,
-      46.4,
-      99.2,
-      71.3,
-      44.7
-    ],
-    "str": [
-      "Highest research capacity score",
+    name: "China",
+    code: "CN",
+    score: 61.8,
+    rank: 2,
+    cov: 1,
+    dims: 7,
+    lat: 35.9,
+    lng: 104.2,
+    sub: "Research powerhouse",
+    ch: "+2.4",
+    d: [55.3, 100, 65.1, 46.4, 99.3, 38.8, 44.7],
+    str: [
+      "Highest innovation output",
       "Top patent filer globally",
-      "Massive investment volume"
+      "Massive investment volume",
     ],
-    "wk": [
+    wk: [
       "Workforce data unreliable (LinkedIn blocked)",
       "Chip design collaboration declining",
-      "Limited governance coverage in AGORA"
+      "Limited governance coverage in AGORA",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 197000
+        c: "United States",
+        v: 197000,
       },
       {
-        "c": "United Kingdom",
-        "v": 28000
+        c: "United Kingdom",
+        v: 28000,
       },
       {
-        "c": "Australia",
-        "v": 22000
+        c: "Australia",
+        v: 22000,
       },
       {
-        "c": "Canada",
-        "v": 18000
+        c: "Canada",
+        v: 18000,
       },
       {
-        "c": "Germany",
-        "v": 17000
-      }
-    ]
+        c: "Germany",
+        v: 17000,
+      },
+    ],
   },
   {
-    "name": "Japan",
-    "code": "JP",
-    "score": 58.4,
-    "rank": 3,
-    "cov": 1,
-    "dims": 7,
-    "lat": 36.2,
-    "lng": 138.3,
-    "sub": "Hardware stronghold",
-    "ch": "+0.8",
-    "d": [
-      36.5,
-      91.4,
-      55.2,
-      68.7,
-      77.5,
-      53,
-      0
-    ],
-    "str": [
-      "Second-broadest semiconductor presence",
-      "Strong patent diversity",
-      "Deep in fabrication tools"
-    ],
-    "wk": [
-      "No governance data",
-      "Moderate collaboration reach",
-      "Research growth lagging"
-    ],
-    "collab": [
-      {
-        "c": "China",
-        "v": 25000
-      },
-      {
-        "c": "United States",
-        "v": 22000
-      },
-      {
-        "c": "South Korea",
-        "v": 8000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 6000
-      },
-      {
-        "c": "Germany",
-        "v": 5000
-      }
-    ]
-  },
-  {
-    "name": "Germany",
-    "code": "DE",
-    "score": 55.3,
-    "rank": 4,
-    "cov": 1,
-    "dims": 7,
-    "lat": 51.2,
-    "lng": 10.4,
-    "sub": "Collaboration hub",
-    "ch": "+0.6",
-    "d": [
-      42,
-      85.4,
-      57.1,
-      45.7,
-      93.4,
-      65.8,
-      0
-    ],
-    "str": [
-      "Top-3 collaboration score",
-      "Broad patent portfolio",
-      "Strong equipment makers (ZEISS, Trumpf)"
-    ],
-    "wk": [
-      "No governance data",
-      "Mid-tier investment volume",
-      "Research output below UK"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 38000
-      },
-      {
-        "c": "China",
-        "v": 17000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 15000
-      },
-      {
-        "c": "France",
-        "v": 10000
-      },
-      {
-        "c": "Italy",
-        "v": 8000
-      }
-    ]
-  },
-  {
-    "name": "South Korea",
-    "code": "KR",
-    "score": 55.1,
-    "rank": 5,
-    "cov": 1,
-    "dims": 7,
-    "lat": 35.9,
-    "lng": 127.8,
-    "sub": "Innovation leader",
-    "ch": "+1.1",
-    "d": [
-      42.3,
-      92.6,
-      60.7,
-      40.4,
-      75.6,
-      66.9,
-      0
-    ],
-    "str": [
+    name: "South Korea",
+    code: "KR",
+    score: 57.2,
+    rank: 3,
+    cov: 0.9,
+    dims: 6,
+    lat: 35.9,
+    lng: 127.8,
+    sub: "Innovation leader",
+    ch: "+1.1",
+    d: [49.7, 92.2, 57.7, 40.4, 75.7, 80, 0],
+    str: [
       "Near-top patent score",
       "Strong corporate AI ecosystem",
-      "Samsung/SK Hynix semiconductor presence"
+      "Samsung/SK Hynix semiconductor presence",
     ],
-    "wk": [
+    wk: [
       "No governance data",
       "Narrow collaboration focus",
-      "Hardware breadth limited vs Japan"
+      "Hardware breadth limited vs Japan",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 14000
+        c: "United States",
+        v: 14000,
       },
       {
-        "c": "China",
-        "v": 12000
+        c: "China",
+        v: 12000,
       },
       {
-        "c": "Japan",
-        "v": 8000
+        c: "Japan",
+        v: 8000,
       },
       {
-        "c": "United Kingdom",
-        "v": 4000
+        c: "United Kingdom",
+        v: 4000,
       },
       {
-        "c": "Germany",
-        "v": 3000
-      }
-    ]
+        c: "Germany",
+        v: 3000,
+      },
+    ],
   },
   {
-    "name": "Singapore",
-    "code": "SG",
-    "score": 54.2,
-    "rank": 6,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": 1.4,
-    "lng": 103.8,
-    "sub": "Punches above weight",
-    "ch": "+1.8",
-    "d": [
-      45.3,
-      79,
-      71.2,
-      48.8,
-      64.9,
-      0,
-      0
+    name: "Japan",
+    code: "JP",
+    score: 53.2,
+    rank: 4,
+    cov: 0.9,
+    dims: 6,
+    lat: 36.2,
+    lng: 138.3,
+    sub: "Hardware stronghold",
+    ch: "+0.8",
+    d: [39.9, 90.9, 52.9, 68.7, 77.5, 0, 0],
+    str: [
+      "Second-broadest semiconductor presence",
+      "Strong patent diversity",
+      "Deep in fabrication tools",
     ],
-    "str": [
+    wk: [
+      "No governance data",
+      "Moderate collaboration reach",
+      "Research growth lagging",
+    ],
+    collab: [
+      {
+        c: "China",
+        v: 25000,
+      },
+      {
+        c: "United States",
+        v: 22000,
+      },
+      {
+        c: "South Korea",
+        v: 8000,
+      },
+      {
+        c: "United Kingdom",
+        v: 6000,
+      },
+      {
+        c: "Germany",
+        v: 5000,
+      },
+    ],
+  },
+  {
+    name: "Singapore",
+    code: "SG",
+    score: 52.5,
+    rank: 5,
+    cov: 0.8,
+    dims: 5,
+    lat: 1.4,
+    lng: 103.8,
+    sub: "Punches above weight",
+    ch: "+1.8",
+    d: [58.3, 77.7, 68.6, 48.8, 64.9, 0, 0],
+    str: [
       "Highest commercial score outside top-3",
       "Strong semiconductor niche",
-      "High research per capita"
+      "High research per capita",
     ],
-    "wk": [
+    wk: [
       "No talent data in PARAT",
       "HQ-attribution may inflate scores",
-      "Small collaboration network"
+      "Small collaboration network",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "China",
-        "v": 8000
+        c: "China",
+        v: 8000,
       },
       {
-        "c": "United States",
-        "v": 6000
+        c: "United States",
+        v: 6000,
       },
       {
-        "c": "India",
-        "v": 3000
+        c: "India",
+        v: 3000,
       },
       {
-        "c": "United Kingdom",
-        "v": 2500
+        c: "United Kingdom",
+        v: 2500,
       },
       {
-        "c": "Australia",
-        "v": 2000
-      }
-    ]
+        c: "Australia",
+        v: 2000,
+      },
+    ],
   },
   {
-    "name": "United Kingdom",
-    "code": "GB",
-    "score": 49.4,
-    "rank": 7,
-    "cov": 1,
-    "dims": 7,
-    "lat": 55.4,
-    "lng": -3.4,
-    "sub": "Ethics & safety focus",
-    "ch": "-0.5",
-    "d": [
-      44.9,
-      83.1,
-      51.9,
-      19.3,
-      95.6,
-      79.6,
-      0
+    name: "Germany",
+    code: "DE",
+    score: 52.3,
+    rank: 6,
+    cov: 0.9,
+    dims: 6,
+    lat: 51.2,
+    lng: 10.4,
+    sub: "Collaboration hub",
+    ch: "+0.6",
+    d: [49.6, 84.5, 54.7, 45.7, 93.5, 27.3, 0],
+    str: [
+      "Top-3 collaboration score",
+      "Broad patent portfolio",
+      "Strong equipment makers (ZEISS, Trumpf)",
     ],
-    "str": [
+    wk: [
+      "No governance data",
+      "Mid-tier investment volume",
+      "Research output below UK",
+    ],
+    collab: [
+      {
+        c: "United States",
+        v: 38000,
+      },
+      {
+        c: "China",
+        v: 17000,
+      },
+      {
+        c: "United Kingdom",
+        v: 15000,
+      },
+      {
+        c: "France",
+        v: 10000,
+      },
+      {
+        c: "Italy",
+        v: 8000,
+      },
+    ],
+  },
+  {
+    name: "United Kingdom",
+    code: "GB",
+    score: 48.4,
+    rank: 7,
+    cov: 0.9,
+    dims: 6,
+    lat: 55.4,
+    lng: -3.4,
+    sub: "Ethics & safety focus",
+    ch: "-0.5",
+    d: [54.7, 82.1, 49.7, 19.3, 95.6, 56.5, 0],
+    str: [
       "Second-highest collaboration score",
       "Strong AI safety research",
-      "Deep talent pool"
+      "Deep talent pool",
     ],
-    "wk": [
+    wk: [
       "Minimal hardware sovereignty",
       "No governance data",
-      "Investment trails US/China significantly"
+      "Investment trails US/China significantly",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 52000
+        c: "United States",
+        v: 52000,
       },
       {
-        "c": "China",
-        "v": 28000
+        c: "China",
+        v: 28000,
       },
       {
-        "c": "Germany",
-        "v": 15000
+        c: "Germany",
+        v: 15000,
       },
       {
-        "c": "France",
-        "v": 11000
+        c: "France",
+        v: 11000,
       },
       {
-        "c": "India",
-        "v": 10000
-      }
-    ]
+        c: "India",
+        v: 10000,
+      },
+    ],
   },
   {
-    "name": "Netherlands",
-    "code": "NL",
-    "score": 47.9,
-    "rank": 8,
-    "cov": 1,
-    "dims": 7,
-    "lat": 52.1,
-    "lng": 5.3,
-    "sub": "EUV monopoly",
-    "ch": "+0.4",
-    "d": [
-      39.1,
-      61.1,
-      45.5,
-      50.6,
-      72.7,
-      55.3,
-      0
-    ],
-    "str": [
+    name: "Netherlands",
+    code: "NL",
+    score: 43.6,
+    rank: 8,
+    cov: 0.9,
+    dims: 6,
+    lat: 52.1,
+    lng: 5.3,
+    sub: "EUV monopoly",
+    ch: "+0.4",
+    d: [46.9, 59.3, 42.9, 50.6, 72.7, 4.8, 0],
+    str: [
       "ASML: 100% EUV lithography monopoly",
       "Strong niche hardware position",
-      "Good collaboration breadth"
+      "Good collaboration breadth",
     ],
-    "wk": [
+    wk: [
       "Narrow commercial ecosystem",
       "Mid-range research output",
-      "Concentrated in single chokepoint"
+      "Concentrated in single chokepoint",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 8000
+        c: "United States",
+        v: 8000,
       },
       {
-        "c": "Germany",
-        "v": 7000
+        c: "Germany",
+        v: 7000,
       },
       {
-        "c": "China",
-        "v": 6000
+        c: "China",
+        v: 6000,
       },
       {
-        "c": "United Kingdom",
-        "v": 5000
+        c: "United Kingdom",
+        v: 5000,
       },
       {
-        "c": "Belgium",
-        "v": 3000
-      }
-    ]
+        c: "Belgium",
+        v: 3000,
+      },
+    ],
   },
   {
-    "name": "India",
-    "code": "IN",
-    "score": 43.9,
-    "rank": 9,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": 20.6,
-    "lng": 79,
-    "sub": "Rising research giant",
-    "ch": "+3.1",
-    "d": [
-      43.5,
-      80.2,
-      78.6,
-      0,
-      89.5,
-      0,
-      0
-    ],
-    "str": [
+    name: "India",
+    code: "IN",
+    score: 41.5,
+    rank: 9,
+    cov: 0.6,
+    dims: 4,
+    lat: 20.6,
+    lng: 79,
+    sub: "Rising research giant",
+    ch: "+3.1",
+    d: [47.5, 79, 78.6, 0, 89.6, 0, 0],
+    str: [
       "Fastest-growing publication output",
       "High commercial investment",
-      "Broad collaboration network"
+      "Broad collaboration network",
     ],
-    "wk": [
+    wk: [
       "Zero hardware sovereignty",
       "No PARAT talent data",
-      "No governance data"
+      "No governance data",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 31000
+        c: "United States",
+        v: 31000,
       },
       {
-        "c": "China",
-        "v": 15000
+        c: "China",
+        v: 15000,
       },
       {
-        "c": "United Kingdom",
-        "v": 10000
+        c: "United Kingdom",
+        v: 10000,
       },
       {
-        "c": "Australia",
-        "v": 6000
+        c: "Australia",
+        v: 6000,
       },
       {
-        "c": "South Korea",
-        "v": 5000
-      }
-    ]
+        c: "South Korea",
+        v: 5000,
+      },
+    ],
   },
   {
-    "name": "Austria",
-    "code": "AT",
-    "score": 43.2,
-    "rank": 10,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": 47.5,
-    "lng": 14.6,
-    "sub": "Niche hardware player",
-    "ch": "+0.3",
-    "d": [
-      35.4,
-      65.2,
-      54.6,
-      37.9,
-      60.8,
-      0,
-      0
-    ],
-    "str": [
+    name: "Austria",
+    code: "AT",
+    score: 41.3,
+    rank: 10,
+    cov: 0.8,
+    dims: 5,
+    lat: 47.5,
+    lng: 14.6,
+    sub: "Niche hardware player",
+    ch: "+0.3",
+    d: [41.9, 63.4, 54.6, 37.9, 61, 0, 0],
+    str: [
       "Solid semiconductor niche",
       "Strong patent diversity",
-      "Balanced profile"
+      "Balanced profile",
     ],
-    "wk": [
-      "Small collaboration reach",
-      "No talent data",
-      "Mid-tier overall"
+    wk: ["Small collaboration reach", "No talent data", "Mid-tier overall"],
+    collab: [
+      {
+        c: "Germany",
+        v: 4000,
+      },
+      {
+        c: "United States",
+        v: 2000,
+      },
+      {
+        c: "United Kingdom",
+        v: 1500,
+      },
+      {
+        c: "Italy",
+        v: 1200,
+      },
+      {
+        c: "Switzerland",
+        v: 1000,
+      },
     ],
-    "collab": [
-      {
-        "c": "Germany",
-        "v": 4000
-      },
-      {
-        "c": "United States",
-        "v": 2000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 1500
-      },
-      {
-        "c": "Italy",
-        "v": 1200
-      },
-      {
-        "c": "Switzerland",
-        "v": 1000
-      }
-    ]
   },
   {
-    "name": "Australia",
-    "code": "AU",
-    "score": 41.9,
-    "rank": 11,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": -25.3,
-    "lng": 133.8,
-    "sub": "Research breadth",
-    "ch": "+0.7",
-    "d": [
-      43.8,
-      84.5,
-      66.9,
-      0,
-      85.8,
-      0,
-      0
-    ],
-    "str": [
-      "Strong patent diversity",
-      "Good commercial ecosystem",
-      "Broad collaborator"
-    ],
-    "wk": [
-      "Zero hardware presence",
-      "No talent data",
-      "No governance coverage"
-    ],
-    "collab": [
-      {
-        "c": "China",
-        "v": 22000
-      },
-      {
-        "c": "United States",
-        "v": 18000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 8000
-      },
-      {
-        "c": "India",
-        "v": 6000
-      },
-      {
-        "c": "South Korea",
-        "v": 4000
-      }
-    ]
-  },
-  {
-    "name": "France",
-    "code": "FR",
-    "score": 39.2,
-    "rank": 12,
-    "cov": 1,
-    "dims": 7,
-    "lat": 46.2,
-    "lng": 2.2,
-    "sub": "Balanced European power",
-    "ch": "+0.2",
-    "d": [
-      38.1,
-      80.4,
-      44.4,
-      2.7,
-      88.6,
-      54.8,
-      0
-    ],
-    "str": [
-      "Top-tier collaboration",
-      "Good patent breadth",
-      "Has PARAT talent data"
-    ],
-    "wk": [
-      "Minimal hardware sovereignty",
-      "Investment trails peers",
-      "Governance score zero"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 18000
-      },
-      {
-        "c": "China",
-        "v": 12000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 11000
-      },
-      {
-        "c": "Germany",
-        "v": 10000
-      },
-      {
-        "c": "Italy",
-        "v": 6000
-      }
-    ]
-  },
-  {
-    "name": "Sweden",
-    "code": "SE",
-    "score": 38.9,
-    "rank": 13,
-    "cov": 1,
-    "dims": 7,
-    "lat": 60.1,
-    "lng": 18.6,
-    "sub": "Nordic innovator",
-    "ch": "+0.4",
-    "d": [
-      37.5,
-      72.4,
-      44.8,
-      16.7,
-      66.6,
-      40.3,
-      0
-    ],
-    "str": [
-      "Has PARAT talent data",
-      "Solid patent diversity",
-      "Good collaboration reach"
-    ],
-    "wk": [
-      "Small hardware footprint",
-      "Mid-tier investment",
-      "No governance data"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 6000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 4000
-      },
-      {
-        "c": "Germany",
-        "v": 3500
-      },
-      {
-        "c": "China",
-        "v": 3000
-      },
-      {
-        "c": "France",
-        "v": 2000
-      }
-    ]
-  },
-  {
-    "name": "Spain",
-    "code": "ES",
-    "score": 38.4,
-    "rank": 14,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": 40.5,
-    "lng": -3.7,
-    "sub": "Growing output",
-    "ch": "+0.6",
-    "d": [
-      37.9,
-      78.3,
-      61.5,
-      0,
-      83.7,
-      0,
-      0
-    ],
-    "str": [
-      "Strong patent diversity",
-      "Good commercial investment",
-      "Broad collaboration"
-    ],
-    "wk": [
-      "Zero hardware sovereignty",
-      "No talent data",
-      "No governance data"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 6000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 5000
-      },
-      {
-        "c": "China",
-        "v": 4500
-      },
-      {
-        "c": "France",
-        "v": 4000
-      },
-      {
-        "c": "Germany",
-        "v": 3500
-      }
-    ]
-  },
-  {
-    "name": "Taiwan",
-    "code": "TW",
-    "score": 38.2,
-    "rank": 15,
-    "cov": 1,
-    "dims": 7,
-    "lat": 23.7,
-    "lng": 121,
-    "sub": "Foundry titan",
-    "ch": "+0.9",
-    "d": [
-      37,
-      83.1,
-      32,
-      22.9,
-      62.8,
-      31,
-      0
-    ],
-    "str": [
-      "TSMC dominates advanced logic fab",
-      "Strong patent portfolio",
-      "Critical supply chain node"
-    ],
-    "wk": [
-      "Low commercial investment score",
-      "Limited collaboration network",
-      "Hardware score understates physical capacity"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 8000
-      },
-      {
-        "c": "China",
-        "v": 6000
-      },
-      {
-        "c": "Japan",
-        "v": 3000
-      },
-      {
-        "c": "South Korea",
-        "v": 2500
-      },
-      {
-        "c": "United Kingdom",
-        "v": 1500
-      }
-    ]
-  },
-  {
-    "name": "Italy",
-    "code": "IT",
-    "score": 37.9,
-    "rank": 16,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": 41.9,
-    "lng": 12.6,
-    "sub": "European breadth",
-    "ch": "+0.3",
-    "d": [
-      40,
-      75.4,
-      54.3,
-      3.9,
-      85.3,
-      0,
-      0
-    ],
-    "str": [
-      "Strong collaboration network",
-      "Good patent breadth",
-      "Growing commercial ecosystem"
-    ],
-    "wk": [
-      "Minimal hardware presence",
-      "No talent data",
-      "No governance data"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 8000
-      },
-      {
-        "c": "China",
-        "v": 7000
-      },
-      {
-        "c": "Germany",
-        "v": 8000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 6000
-      },
-      {
-        "c": "France",
-        "v": 6000
-      }
-    ]
-  },
-  {
-    "name": "Switzerland",
-    "code": "CH",
-    "score": 37.8,
-    "rank": 17,
-    "cov": 1,
-    "dims": 7,
-    "lat": 46.8,
-    "lng": 8.2,
-    "sub": "Precision AI",
-    "ch": "+0.1",
-    "d": [
-      41.8,
-      61.4,
-      45.2,
-      4.8,
-      70.9,
-      64.1,
-      0
-    ],
-    "str": [
-      "High research quality",
-      "Strong talent pool",
-      "Good IP diversity"
-    ],
-    "wk": [
-      "Minimal hardware",
-      "Mid-tier commercial",
-      "Small market"
-    ],
-    "collab": [
-      {
-        "c": "Germany",
-        "v": 6000
-      },
-      {
-        "c": "United States",
-        "v": 5000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 4000
-      },
-      {
-        "c": "France",
-        "v": 3000
-      },
-      {
-        "c": "Italy",
-        "v": 2500
-      }
-    ]
-  },
-  {
-    "name": "Brazil",
-    "code": "BR",
-    "score": 36.7,
-    "rank": 18,
-    "cov": 0.9,
-    "dims": 6,
-    "lat": -14.2,
-    "lng": -51.9,
-    "sub": "Emerging contender",
-    "ch": "+2.0",
-    "d": [
-      33.1,
-      79.7,
-      63.8,
-      0,
-      58.3,
-      0,
-      0
-    ],
-    "str": [
-      "Strong patent diversity",
-      "Growing investment",
-      "Largest Latin American AI output"
-    ],
-    "wk": [
-      "Zero hardware",
-      "No talent data",
-      "Limited collaboration breadth"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 5000
-      },
-      {
-        "c": "China",
-        "v": 4000
-      },
-      {
-        "c": "United Kingdom",
-        "v": 2500
-      },
-      {
-        "c": "France",
-        "v": 2000
-      },
-      {
-        "c": "Germany",
-        "v": 1800
-      }
-    ]
-  },
-  {
-    "name": "Finland",
-    "code": "FI",
-    "score": 36.3,
-    "rank": 19,
-    "cov": 1,
-    "dims": 7,
-    "lat": 61.9,
-    "lng": 25.7,
-    "sub": "Nokia legacy",
-    "ch": "+0.2",
-    "d": [
-      36.3,
-      69.1,
-      49.7,
-      0,
-      60,
-      57.1,
-      0
-    ],
-    "str": [
-      "Has PARAT talent data",
-      "Good research quality",
-      "Solid IP portfolio"
-    ],
-    "wk": [
-      "Zero hardware",
-      "Small market size",
-      "Limited collaboration reach"
-    ],
-    "collab": [
-      {
-        "c": "United States",
-        "v": 3000
-      },
-      {
-        "c": "China",
-        "v": 2500
-      },
-      {
-        "c": "United Kingdom",
-        "v": 2000
-      },
-      {
-        "c": "Germany",
-        "v": 1800
-      },
-      {
-        "c": "Sweden",
-        "v": 1500
-      }
-    ]
-  },
-  {
-    "name": "Canada",
-    "code": "CA",
-    "score": 35.3,
-    "rank": 20,
-    "cov": 1,
-    "dims": 7,
-    "lat": 56.1,
-    "lng": -106.3,
-    "sub": "Open AI research",
-    "ch": "+0.5",
-    "d": [
-      41.5,
-      85.3,
-      44.2,
-      0,
-      88.9,
-      9.1,
-      0
-    ],
-    "str": [
+    name: "Canada",
+    code: "CA",
+    score: 41.3,
+    rank: 11,
+    cov: 0.7,
+    dims: 5,
+    lat: 56.1,
+    lng: -106.3,
+    sub: "Open AI research",
+    ch: "+0.5",
+    d: [49.8, 84.4, 41.2, 0, 89, 60, 0],
+    str: [
       "Top-5 collaboration score",
       "Strong patent diversity",
-      "AI research pioneers (Bengio, Hinton)"
+      "AI research pioneers (Bengio, Hinton)",
     ],
-    "wk": [
+    wk: [
       "Zero hardware sovereignty",
       "Very low talent score",
-      "Commercial ecosystem underdeveloped"
+      "Commercial ecosystem underdeveloped",
     ],
-    "collab": [
+    collab: [
       {
-        "c": "United States",
-        "v": 35000
+        c: "United States",
+        v: 35000,
       },
       {
-        "c": "China",
-        "v": 18000
+        c: "China",
+        v: 18000,
       },
       {
-        "c": "United Kingdom",
-        "v": 9000
+        c: "United Kingdom",
+        v: 9000,
       },
       {
-        "c": "France",
-        "v": 5000
+        c: "France",
+        v: 5000,
       },
       {
-        "c": "Germany",
-        "v": 4500
-      }
-    ]
-  }
+        c: "Germany",
+        v: 4500,
+      },
+    ],
+  },
+  {
+    name: "Australia",
+    code: "AU",
+    score: 41.1,
+    rank: 12,
+    cov: 0.6,
+    dims: 4,
+    lat: -25.3,
+    lng: 133.8,
+    sub: "Research breadth",
+    ch: "+0.7",
+    d: [54.5, 83.5, 66.9, 0, 85.9, 0, 0],
+    str: [
+      "Strong patent diversity",
+      "Good commercial ecosystem",
+      "Broad collaborator",
+    ],
+    wk: ["Zero hardware presence", "No talent data", "No governance coverage"],
+    collab: [
+      {
+        c: "China",
+        v: 22000,
+      },
+      {
+        c: "United States",
+        v: 18000,
+      },
+      {
+        c: "United Kingdom",
+        v: 8000,
+      },
+      {
+        c: "India",
+        v: 6000,
+      },
+      {
+        c: "South Korea",
+        v: 4000,
+      },
+    ],
+  },
+  {
+    name: "Sweden",
+    code: "SE",
+    score: 39.8,
+    rank: 13,
+    cov: 1,
+    dims: 6,
+    lat: 60.1,
+    lng: 18.6,
+    sub: "Nordic innovator",
+    ch: "+0.4",
+    d: [44.9, 70.7, 41.8, 16.7, 66.7, 43.2, 0],
+    str: [
+      "Has PARAT talent data",
+      "Solid patent diversity",
+      "Good collaboration reach",
+    ],
+    wk: [
+      "Small hardware footprint",
+      "Mid-tier investment",
+      "No governance data",
+    ],
+    collab: [
+      {
+        c: "United States",
+        v: 6000,
+      },
+      {
+        c: "United Kingdom",
+        v: 4000,
+      },
+      {
+        c: "Germany",
+        v: 3500,
+      },
+      {
+        c: "China",
+        v: 3000,
+      },
+      {
+        c: "France",
+        v: 2000,
+      },
+    ],
+  },
+  {
+    name: "Taiwan",
+    code: "TW",
+    score: 38.6,
+    rank: 14,
+    cov: 1,
+    dims: 6,
+    lat: 23.7,
+    lng: 121,
+    sub: "Foundry titan",
+    ch: "+0.9",
+    d: [42.8, 82.1, 28.9, 22.9, 62.8, 30.4, 0],
+    str: [
+      "TSMC dominates advanced logic fab",
+      "Strong patent portfolio",
+      "Critical supply chain node",
+    ],
+    wk: [
+      "Low commercial investment score",
+      "Limited collaboration network",
+      "Hardware score understates physical capacity",
+    ],
+    collab: [
+      {
+        c: "United States",
+        v: 8000,
+      },
+      {
+        c: "China",
+        v: 6000,
+      },
+      {
+        c: "Japan",
+        v: 3000,
+      },
+      {
+        c: "South Korea",
+        v: 2500,
+      },
+      {
+        c: "United Kingdom",
+        v: 1500,
+      },
+    ],
+  },
+  {
+    name: "Finland",
+    code: "FI",
+    score: 37.9,
+    rank: 15,
+    cov: 0.7,
+    dims: 5,
+    lat: 61.9,
+    lng: 25.7,
+    sub: "Nokia legacy",
+    ch: "+0.2",
+    d: [44.4, 67.5, 46.4, 0, 60.1, 66.5, 0],
+    str: [
+      "Has PARAT talent data",
+      "Good research quality",
+      "Solid IP portfolio",
+    ],
+    wk: ["Zero hardware", "Small market size", "Limited collaboration reach"],
+    collab: [
+      {
+        c: "United States",
+        v: 3000,
+      },
+      {
+        c: "China",
+        v: 2500,
+      },
+      {
+        c: "United Kingdom",
+        v: 2000,
+      },
+      {
+        c: "Germany",
+        v: 1800,
+      },
+      {
+        c: "Sweden",
+        v: 1500,
+      },
+    ],
+  },
+  {
+    name: "Spain",
+    code: "ES",
+    score: 36.8,
+    rank: 16,
+    cov: 0.6,
+    dims: 4,
+    lat: 40.5,
+    lng: -3.7,
+    sub: "Growing output",
+    ch: "+0.6",
+    d: [44, 76.9, 61.5, 0, 83.8, 0, 0],
+    str: [
+      "Strong patent diversity",
+      "Good commercial investment",
+      "Broad collaboration",
+    ],
+    wk: ["Zero hardware sovereignty", "No talent data", "No governance data"],
+    collab: [
+      {
+        c: "United States",
+        v: 6000,
+      },
+      {
+        c: "United Kingdom",
+        v: 5000,
+      },
+      {
+        c: "China",
+        v: 4500,
+      },
+      {
+        c: "France",
+        v: 4000,
+      },
+      {
+        c: "Germany",
+        v: 3500,
+      },
+    ],
+  },
+  {
+    name: "Italy",
+    code: "IT",
+    score: 36.5,
+    rank: 17,
+    cov: 0.9,
+    dims: 5,
+    lat: 41.9,
+    lng: 12.6,
+    sub: "European breadth",
+    ch: "+0.3",
+    d: [46.4, 73.9, 54.3, 3.9, 85.4, 0, 0],
+    str: [
+      "Strong collaboration network",
+      "Good patent breadth",
+      "Growing commercial ecosystem",
+    ],
+    wk: ["Minimal hardware presence", "No talent data", "No governance data"],
+    collab: [
+      {
+        c: "United States",
+        v: 8000,
+      },
+      {
+        c: "China",
+        v: 7000,
+      },
+      {
+        c: "Germany",
+        v: 8000,
+      },
+      {
+        c: "United Kingdom",
+        v: 6000,
+      },
+      {
+        c: "France",
+        v: 6000,
+      },
+    ],
+  },
+  {
+    name: "Switzerland",
+    code: "CH",
+    score: 35.1,
+    rank: 18,
+    cov: 1,
+    dims: 6,
+    lat: 46.8,
+    lng: 8.2,
+    sub: "Precision AI",
+    ch: "+0.1",
+    d: [52.8, 59.3, 42.6, 4.8, 71, 23.7, 0],
+    str: ["High research quality", "Strong talent pool", "Good IP diversity"],
+    wk: ["Minimal hardware", "Mid-tier commercial", "Small market"],
+    collab: [
+      {
+        c: "Germany",
+        v: 6000,
+      },
+      {
+        c: "United States",
+        v: 5000,
+      },
+      {
+        c: "United Kingdom",
+        v: 4000,
+      },
+      {
+        c: "France",
+        v: 3000,
+      },
+      {
+        c: "Italy",
+        v: 2500,
+      },
+    ],
+  },
+  {
+    name: "Brazil",
+    code: "BR",
+    score: 34.7,
+    rank: 19,
+    cov: 0.6,
+    dims: 4,
+    lat: -14.2,
+    lng: -51.9,
+    sub: "Emerging contender",
+    ch: "+2.0",
+    d: [36.4, 78.4, 63.8, 0, 58.4, 0, 0],
+    str: [
+      "Strong patent diversity",
+      "Growing investment",
+      "Largest Latin American AI output",
+    ],
+    wk: ["Zero hardware", "No talent data", "Limited collaboration breadth"],
+    collab: [
+      {
+        c: "United States",
+        v: 5000,
+      },
+      {
+        c: "China",
+        v: 4000,
+      },
+      {
+        c: "United Kingdom",
+        v: 2500,
+      },
+      {
+        c: "France",
+        v: 2000,
+      },
+      {
+        c: "Germany",
+        v: 1800,
+      },
+    ],
+  },
+  {
+    name: "France",
+    code: "FR",
+    score: 34.5,
+    rank: 20,
+    cov: 1,
+    dims: 6,
+    lat: 46.2,
+    lng: 2.2,
+    sub: "Balanced European power",
+    ch: "+0.2",
+    d: [44, 79.2, 41.6, 2.7, 88.7, 3.7, 0],
+    str: [
+      "Top-tier collaboration",
+      "Good patent breadth",
+      "Has PARAT talent data",
+    ],
+    wk: [
+      "Minimal hardware sovereignty",
+      "Investment trails peers",
+      "Governance score zero",
+    ],
+    collab: [
+      {
+        c: "United States",
+        v: 18000,
+      },
+      {
+        c: "China",
+        v: 12000,
+      },
+      {
+        c: "United Kingdom",
+        v: 11000,
+      },
+      {
+        c: "Germany",
+        v: 10000,
+      },
+      {
+        c: "Italy",
+        v: 6000,
+      },
+    ],
+  },
 ];
 
 const DIM_LABELS = [
